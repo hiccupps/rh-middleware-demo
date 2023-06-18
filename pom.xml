@@ -5,7 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mycompany</groupId>
-	<artifactId>camel-ose-springboot-xml</artifactId>
+	<artifactId>rh-middleware-demo</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel XML</name>
 	<description>Spring Boot example running a Camel route defined in XML</description>
@@ -103,19 +103,19 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.jboss.redhat-fuse</groupId>
-				<artifactId>fabric8-maven-plugin</artifactId>
-				<version>${fuse.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>resource</goal>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!--	<plugin>
+                    <groupId>org.jboss.redhat-fuse</groupId>
+                    <artifactId>fabric8-maven-plugin</artifactId>
+                    <version>${fuse.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>resource</goal>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>-->
 		</plugins>
 	</build>
 	<profiles>
