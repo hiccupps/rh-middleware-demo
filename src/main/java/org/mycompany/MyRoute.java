@@ -36,16 +36,16 @@ public class MyRoute extends RouteBuilder {
 	 from("direct:produce-to-sds-kafka")
 			 .routeId("KafkaProducerGreetingRoute")
 			 .setBody(simple("Hello Kafka !"))
-			 .log("Sednign Message to Kafka : ${body}")
+			 .log("Sending  to Kafka : ${body}")
 			 .to("kafka:{{topic}}?brokers={{broker}}");
 
 	 from("kafka:{{topic}}?brokers={{broker}}")
 			 .routeId("KafkaConsumerGreetingRoute")
 			 .log("Message received from Kafka : ${body}")
-			 .log("    on the topic ${headers[kafka.TOPIC]}")
-			 .log("    on the partition ${headers[kafka.PARTITION]}")
-			 .log("    with the offset ${headers[kafka.OFFSET]}")
-			 .log("    with the key ${headers[kafka.KEY]}");
+			 .log("-> on the topic ${headers[kafka.TOPIC]}")
+			 .log("-> on the partition ${headers[kafka.PARTITION]}")
+			 .log("-> with the offset ${headers[kafka.OFFSET]}")
+			 .log("-> with the key ${headers[kafka.KEY]}");
 
 
 
